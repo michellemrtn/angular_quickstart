@@ -8,14 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ContactsComponent } from './contacts/contacts.component';
-
+import { ContactsModule } from './contacts/contacts.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactsComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +22,8 @@ import { ContactsComponent } from './contacts/contacts.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ContactsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
