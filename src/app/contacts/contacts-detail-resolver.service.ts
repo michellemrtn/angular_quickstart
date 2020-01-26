@@ -18,7 +18,7 @@ export class ContactsDetailResolverService implements Resolve<Contact> {
     constructor(private cs: ContactsService, private router: Router) { }
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Contact> | Observable<never> {
-        let id = route.paramMap.get('id');
+        const id = route.paramMap.get('id');
 
         return this.cs.getContact(id).pipe(
             take(1),

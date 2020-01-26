@@ -41,4 +41,4 @@ export const CONTACTS: Contact[] = [
             plz: '12345'
         }
     }
-]
+];

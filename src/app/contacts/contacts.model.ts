@@ -6,6 +6,6 @@ export interface Contact {
         strasse: string;
         plz: string;
         ort: string;
-    },
+    };
     firma?: string;
 }
