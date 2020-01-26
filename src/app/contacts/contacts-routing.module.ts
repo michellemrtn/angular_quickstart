@@ -8,16 +8,14 @@ import { ContactsDetailResolverService } from './contacts-detail-resolver.servic
 const contactsRoutes: Routes = [
     {
         path: '',
-        component: ContactsListComponent,
-        children: [
-            {
-                path: ':id',
-                component: ContactsDetailComponent,
-                resolve: {
-                    crisis: ContactsDetailResolverService
-                }
-            }
-        ]
+        component: ContactsListComponent
+    },
+    {
+        path: ':id',
+        component: ContactsDetailComponent,
+        resolve: {
+            contact: ContactsDetailResolverService
+        }
     }
 ];
 
@@ -27,6 +25,9 @@ const contactsRoutes: Routes = [
     ],
     exports: [
         RouterModule
-    ]
+    ],
+     providers: [
+         ContactsDetailResolverService
+     ]
 })
 export class ContactsRoutingModule { }

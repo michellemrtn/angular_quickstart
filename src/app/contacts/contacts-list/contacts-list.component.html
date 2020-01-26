@@ -5,27 +5,22 @@
             <mat-cell *matCellDef="let element"> {{element.vorname}}
             </mat-cell>
         </ng-container>
-        <ng-container matColumnDef="name">
+        <ng-container matColumnDef="nachname">
             <mat-header-cell *matHeaderCellDef> Nachname </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+            <mat-cell *matCellDef="let element"> {{element.nachname}} </mat-cell>
         </ng-container>
         <ng-container matColumnDef="adresse">
             <mat-header-cell *matHeaderCellDef> Adresse </mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.adresse | json}} </mat-cell>
         </ng-container>
-        <ng-container matColumnDef="edit">
-            <mat-header-cell *matHeaderCellDef></mat-header-cell>
-            <mat-cell *matCellDef="let element">
-                <a [routerLink]="[element.id]" type="button">
-                    <mat-icon class="icon">edit</mat-icon>
+        <ng-container matColumnDef="action">
+            <mat-header-cell mat-header-cell *matHeaderCellDef> Aktion </mat-header-cell>
+            <mat-cell *matCellDef="let element" fxLayoutGap="5px">
+                <a [routerLink]="[element.id]">
+                    <mat-icon color="primary" class="icon">edit</mat-icon>
                 </a>
-            </mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="delete">
-            <mat-header-cell *matHeaderCellDef></mat-header-cell>
-            <mat-cell *matCellDef="let element">
-                <a (click)="deletePost(element.id)" type="button">
-                    <mat-icon class="icon">delete</mat-icon>
+                <a (click)="deleteContact(element.id)" type="button">
+                    <mat-icon color="primary" class="icon">delete</mat-icon>
                 </a>
             </mat-cell>
         </ng-container>

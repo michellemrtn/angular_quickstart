@@ -6,9 +6,8 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'contacts',
-    loadChildren: () => import('./contacts/contacts.module').then(mod => mod.ContactsModule),
-    data: { preload: true }
-  },
+    loadChildren: () => import('./contacts/contacts.module').then(mod => mod.ContactsModule)
+  }
 ];
 
 @NgModule({

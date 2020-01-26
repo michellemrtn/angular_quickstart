@@ -10,13 +10,12 @@ import { ContactsService } from '../contacts.service';
 })
 export class ContactsListComponent implements OnInit {
   contacts$: Observable<Contact[]>;
-  displayedColumns = ['vorname', 'name', 'adresse', 'edit', 'delete'];
+  displayedColumns = ['vorname', 'nachname', 'adresse', 'action'];
 
   constructor(private service: ContactsService) { }
 
   ngOnInit() {
     this.contacts$ = this.service.getContacts();
-    this.service.getContacts().subscribe(contacts => console.log(contacts));
   }
 
   addContact() {

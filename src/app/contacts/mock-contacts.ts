@@ -4,7 +4,7 @@ export const CONTACTS: Contact[] = [
     {
         id: 0,
         vorname: 'Max',
-        name: 'Mustermann',
+        nachname: 'Mustermann',
         adresse: {
             strasse: 'Teststrasse 1',
             ort: 'Nürnberg',
@@ -14,7 +14,7 @@ export const CONTACTS: Contact[] = [
     {
         id: 1,
         vorname: 'Judith',
-        name: 'Androthe',
+        nachname: 'Androthe',
         adresse: {
             strasse: 'Teststrasse 2',
             ort: 'Nürnberg',
@@ -24,7 +24,7 @@ export const CONTACTS: Contact[] = [
     {
         id: 2,
         vorname: 'Julia',
-        name: 'Stoh',
+        nachname: 'Stoh',
         adresse: {
             strasse: 'Teststrasse 3',
             ort: 'Nürnberg',
@@ -34,7 +34,7 @@ export const CONTACTS: Contact[] = [
     {
         id: 3,
         vorname: 'Andreas',
-        name: 'Meier',
+        nachname: 'Meier',
         adresse: {
             strasse: 'Teststrasse 15',
             ort: 'Nürnberg',
