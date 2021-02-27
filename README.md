@@ -1,4 +1,5 @@
 # BasicFrontend
+This is a angular quickstart project - including a basic angular project, angular material and a few sample modules and components.
 
 ## Development server
 
